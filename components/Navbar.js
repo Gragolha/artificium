@@ -45,6 +45,7 @@ export default function Navbar() {
           rounded={8}
           borderColor="rgba(255,255,255,.1)"
           size="sm"
+          focusBorderColor="#fcba03"
         />
       </GridItem>
 
