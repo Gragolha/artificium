@@ -52,16 +52,17 @@ export default function Navbar() {
 
         <GridItem my="auto" colStart={5} colSpan={4}>
           <Input
-            _placeholder={{ color: "rgba(255,255,255,.1)" }}
+            _placeholder={{ color: "rgba(255,255,255,.15)" }}
             _hover={{
-              bgColor: "rgba(0,0,0,0.1)",
+              bgColor: "rgba(0,0,0,0.2)",
               borderColor: "rgba(252, 186, 3, 0.5)",
             }}
             fontSize={12}
             placeholder="Pesquisar"
             bgColor="rgba(0,0,0,0.05)"
+            color="white"
             rounded={8}
-            borderColor="rgba(255,255,255,.1)"
+            borderColor="rgba(255,255,255,.15)"
             size="sm"
             focusBorderColor="#fcba03"
           />
@@ -136,6 +137,7 @@ export default function Navbar() {
           backdropFilter="auto"
           backdropBlur="60px"
           backdropSaturate="150%"
+          boxShadow="0px 20px 90px rgba(0,0,0,0.4)"
         >
           <ModalHeader color="#FFF" fontSize={24} textAlign="center">
             Updates
@@ -173,7 +175,7 @@ export default function Navbar() {
               color="white"
               h="21px"
               _hover={{
-                bgColor: "#4F4F4F",
+                bgColor: "#184fb5",
                 transform: "scale(1.05)",
                 boxShadow: "0px 4px 9px rgba(0,0,0,0.1)",
               }}

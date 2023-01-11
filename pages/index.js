@@ -56,6 +56,28 @@ export default function Home() {
             O Moonlight é um artefato raro, caso degenerado da atividade da
             Electro anomalia.
           </CardArt>
+          <GridItem colStart={10} colSpan={3}>
+            <CardArt
+              name="MOONLIGHT"
+              artifactImg="/moonlight.png"
+              colorRare="#4978F1"
+              rare="RARO"
+            >
+              O Moonlight é um artefato raro, caso degenerado da atividade da
+              Electro anomalia.
+            </CardArt>
+          </GridItem>
+          <GridItem colStart={10} colSpan={3}>
+            <CardArt
+              name="MOONLIGHT"
+              artifactImg="/moonlight.png"
+              colorRare="#4978F1"
+              rare="RARO"
+            >
+              O Moonlight é um artefato raro, caso degenerado da atividade da
+              Electro anomalia.
+            </CardArt>
+          </GridItem>
         </GridItem>
       </MyGrid>
     </>
