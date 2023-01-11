@@ -1,4 +1,4 @@
-import { Center, Grid } from "@chakra-ui/react";
+import { Center, Flex, Grid } from "@chakra-ui/react";
 
 export default function MyGrid({
   mt,
@@ -11,23 +11,26 @@ export default function MyGrid({
   backdropFilter,
   backdropBlur,
   boxShadow,
+  minH,
 }) {
   return (
-    <Center
+    <Flex
+      minH={minH}
       boxShadow={boxShadow}
       backdropFilter={backdropFilter}
       backdropBlur={backdropBlur}
       zIndex={zIndex}
       position={fixed ? "fixed" : ""}
-      width="100%"
-      bgColor={bgColor || "#13171f"}
+      bgColor={bgColor || "#151515"}
+      w="100%"
       h={h}
       borderBottom={borderBottom}
       mt={mt}
+      fontFamily="Inter"
     >
-      <Grid templateColumns="repeat(12, 64px)" gap={4}>
+      <Grid mx="auto" templateColumns="repeat(12, 65px)" gap={30}>
         {children}
       </Grid>
-    </Center>
+    </Flex>
   );
 }
