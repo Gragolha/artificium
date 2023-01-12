@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import Categ from "../components/Categories";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import Introduction from "../components/Introduction";
+import Status from "../components/Status";
 
 export default function Home() {
   return (
@@ -17,10 +19,36 @@ export default function Home() {
         bgGradient="radial(1000px 900px at top  ,rgba(69, 60, 25, 0.6) , transparent)"
       >
         <MyGrid minH="100vh" overX="hidden" bgColor="transparent" mb="90px">
-          <GridItem colStart={3} colSpan={9} mt="90px" ml="80px" mb="400px">
-            <Image src="/nightstar.png" width="600" height="300" />
+          <GridItem
+            colStart={1}
+            colSpan={2}
+            mt="290px"
+            filter="auto"
+            blur="3px"
+            opacity="0.4"
+          >
+            <Image src="/moonlight.png" width="150" height="150" />
           </GridItem>
-          <GridItem colStart={1} colSpan={7}>
+          <GridItem
+            colStart={11}
+            colSpan={2}
+            mt="300px"
+            filter="auto"
+            blur="3px"
+          >
+            <Image src="/kolobok.png" width="150" height="150" />
+          </GridItem>
+
+          <GridItem colStart={4} colSpan={7} ml="20px" mt="-350px ">
+            <Image src="/nightstar.png" width="500" height="300" />
+          </GridItem>
+          <GridItem colStart={1} colSpan={4} mt="-200px">
+            <Introduction />
+          </GridItem>
+          <GridItem colStart={9} colSpan={4} mt="-100px">
+            <Status />
+          </GridItem>
+          <GridItem colStart={1} colSpan={7} mt="300px">
             <Box color="#1D1D1D" fontSize={96} fontWeight="bold">
               ARTEFATOS
             </Box>

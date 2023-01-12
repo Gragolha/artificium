@@ -51,7 +51,7 @@ export default function Navbar() {
         </GridItem>
         {/* MaxH = limita o tamanho maximo, MinH = obriga a ser o tamanho minimo delimitado */}
 
-        <GridItem my="auto" colStart={5} colSpan={4}>
+        <GridItem my="15px" colStart={5} colSpan={4}>
           <Input
             _placeholder={{ color: "rgba(255,255,255,.15)" }}
             _hover={{
