@@ -25,19 +25,20 @@ import {
 } from "@chakra-ui/react";
 import MyGrid from "./Grid";
 import Image from "next/image";
-import { Chat, ClosedCaptioning, X, XSquare } from "phosphor-react";
+import { Chat, X } from "phosphor-react";
 import Link from "next/link";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <MyGrid
-        zIndex="2"
-        boxShadow="0px  4px 90px rgba(0,0,0,0.5)"
+        fixed
+        zIndex="1"
+        boxShadow="0px  4px 90px 10px rgba(0,0,0,0.5)"
         h="60px"
         bgColor="rgba(217,217,217,.01)"
-        fixed
         backdropBlur="40px"
         backdropFilter="auto"
       >
@@ -96,12 +97,12 @@ export default function Navbar() {
               </MenuButton>
               <Flex>
                 <MenuList
-                  mt="3px"
+                  mt="10px"
                   blur="lg"
                   minH="220px"
                   minW="170px"
                   boxShadow="0px 4px 40px rgba(0,0,0,0.3)"
-                  bgColor="#181818"
+                  bgColor="#2c2c2c"
                   color="white"
                   border="none"
                 >
@@ -130,21 +131,31 @@ export default function Navbar() {
           </Flex>
         </GridItem>
       </MyGrid>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay backdropFilter="blur(4px)" />
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        blockScrollOnMount={false}
+        isCentered
+      >
+        <ModalOverlay backdropFilter="blur(10px)" />
         <ModalContent
-          bgColor="rgba(255,255,255,0.02)"
+          bgColor="rgba(21, 21, 21,0.7)"
           backdropFilter="auto"
-          backdropBlur="60px"
-          backdropSaturate="150%"
-          boxShadow="0px 20px 90px rgba(0,0,0,0.4)"
+          backdropBlur="100px"
+          backdropSaturate="230%"
+          boxShadow="0px 20px 60px  rgba(0,0,0,0.1)"
+          rounded={20}
         >
-          <ModalHeader color="#FFF" fontSize={24} textAlign="center">
+          <ModalHeader
+            color="rgba(255,255,255,0.7)"
+            fontSize={24}
+            textAlign="center"
+          >
             Updates
             <Icon
               viewBox="0 0 200 200"
               boxSize="4"
-              color="red"
+              color="red.500"
               ml="5px"
               my="auto"
             >
@@ -154,7 +165,7 @@ export default function Navbar() {
               />
             </Icon>
           </ModalHeader>
-          <Divider borderColor="#424242" />
+          <Divider borderColor="rgba(255,255,255,0.1)" />
           <ModalBody>
             <Text color="#d3d3d3" p="10px">
               Mussum Ipsum, cacilds vidis litro abertis. Detraxit consequat et

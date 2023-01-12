@@ -1,4 +1,4 @@
-import { Center, Flex, Grid } from "@chakra-ui/react";
+import { Center, Flex, Grid, SimpleGrid } from "@chakra-ui/react";
 
 export default function MyGrid({
   mt,
@@ -12,9 +12,13 @@ export default function MyGrid({
   backdropBlur,
   boxShadow,
   minH,
+  overX,
+  mb,
 }) {
   return (
     <Flex
+      mb={mb}
+      overflowX={overX}
       minH={minH}
       boxShadow={boxShadow}
       backdropFilter={backdropFilter}
@@ -28,9 +32,15 @@ export default function MyGrid({
       mt={mt}
       fontFamily="Inter"
     >
-      <Grid mx="auto" templateColumns="repeat(12, 65px)" gap={30}>
+      <SimpleGrid
+        w="1110px"
+        mx="auto"
+        columns="12"
+        gap={30}
+        autoRows="max-content"
+      >
         {children}
-      </Grid>
+      </SimpleGrid>
     </Flex>
   );
 }

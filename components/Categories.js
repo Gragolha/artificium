@@ -15,7 +15,6 @@ export default function Categ() {
       rounded={8}
       h="480px"
       bgColor="#2c2c2c"
-      mt="90px"
       boxShadow="0px 40px 40px -15px rgba(0,0,0,0.2)"
     >
       <Center color="#d2d2d2" fontWeight="bold" fontSize={20} mt="15px">
