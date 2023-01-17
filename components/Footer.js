@@ -28,7 +28,12 @@ export default function Footer({ mb }) {
             <Image src="logo.svg" width="250" height="200" />
           </Flex>
         </Link>
-        <Box textAlign="center" fontWeight="light" px="650px" mt="20px">
+        <Box
+          textAlign="center"
+          fontWeight="light"
+          px={[10, 100, 200, 300, 400, 450]}
+          mt="20px"
+        >
           Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que
           eu tomo, mas ninguém vê os tombis que eu levo!Si num tem leite então
           bota uma pinga aí cumpadi!Não sou faixa preta cumpadi, sou preto

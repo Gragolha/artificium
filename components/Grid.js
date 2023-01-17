@@ -31,11 +31,12 @@ export default function MyGrid({
       borderBottom={borderBottom}
       mt={mt}
       fontFamily="Inter"
+      alignContent="center"
     >
       <SimpleGrid
-        w="1110px"
+        w={[100, 200, 1110]}
         mx="auto"
-        columns="12"
+        columns={[4, 9, 12]}
         gap={30}
         autoRows="max-content"
       >
